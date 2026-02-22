@@ -1,0 +1,51 @@
+<div class="dashboard">
+  <div class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+    <button (click)="authService.logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">🎙️</div>
+      <div class="stat-info">
+        <h2>{{ sermonCount }}</h2>
+        <p>Sermons</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📅</div>
+      <div class="stat-info">
+        <h2>{{ eventCount }}</h2>
+        <p>Events</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-info">
+        <h2>1,200+</h2>
+        <p>Members</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🙏</div>
+      <div class="stat-info">
+        <h2>{{ yearsOfMinistry }}+</h2>
+        <p>Years of Ministry</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-actions">
+    <h2>Quick Actions</h2>
+    <div class="actions-grid">
+      <a routerLink="/admin/sermons" class="action-card">
+        <span class="action-icon">🎙️</span>
+        <span>Manage Sermons</span>
+      </a>
+      <a routerLink="/admin/events" class="action-card">
+        <span class="action-icon">📅</span>
+        <span>Manage Events</span>
+      </a>
+    </div>
+  </div>
+</div>
