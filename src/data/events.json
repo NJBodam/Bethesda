@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "title": "Sunday Service",
+    "date": "2024-01-14",
+    "time": "10:00 AM",
+    "location": "Main Sanctuary",
+    "description": "Join us for our weekly Sunday service.",
+    "imageUrl": "",
+    "createdAt": "2024-01-07T10:00:00.000Z",
+    "updatedAt": "2024-01-07T10:00:00.000Z"
+  }
+]
