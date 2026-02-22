@@ -8,11 +8,10 @@ import { ChurchEvent } from '../../core/models/event.model';
 import { CardComponent } from '../../shared/ui/card/card.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, RouterLink, CardComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    imports: [CommonModule, RouterLink, CardComponent],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   latestSermons: Sermon[] = [];

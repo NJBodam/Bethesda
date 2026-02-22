@@ -5,11 +5,10 @@ import { ChurchEvent } from '../../core/models/event.model';
 import { CardComponent } from '../../shared/ui/card/card.component';
 
 @Component({
-  selector: 'app-events',
-  standalone: true,
-  imports: [CommonModule, CardComponent],
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+    selector: 'app-events',
+    imports: [CommonModule, CardComponent],
+    templateUrl: './events.component.html',
+    styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
   events: ChurchEvent[] = [];

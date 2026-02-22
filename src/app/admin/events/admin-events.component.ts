@@ -6,11 +6,10 @@ import { EventService } from '../../core/services/api/event.service';
 import { ChurchEvent } from '../../core/models/event.model';
 
 @Component({
-  selector: 'app-admin-events',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
-  templateUrl: './admin-events.component.html',
-  styleUrls: ['./admin-events.component.scss']
+    selector: 'app-admin-events',
+    imports: [CommonModule, FormsModule, RouterLink],
+    templateUrl: './admin-events.component.html',
+    styleUrls: ['./admin-events.component.scss']
 })
 export class AdminEventsComponent implements OnInit {
   events: ChurchEvent[] = [];

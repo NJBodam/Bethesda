@@ -5,11 +5,10 @@ import { Sermon } from '../../core/models/sermon.model';
 import { CardComponent } from '../../shared/ui/card/card.component';
 
 @Component({
-  selector: 'app-sermons',
-  standalone: true,
-  imports: [CommonModule, CardComponent],
-  templateUrl: './sermons.component.html',
-  styleUrls: ['./sermons.component.scss']
+    selector: 'app-sermons',
+    imports: [CommonModule, CardComponent],
+    templateUrl: './sermons.component.html',
+    styleUrls: ['./sermons.component.scss']
 })
 export class SermonsComponent implements OnInit {
   sermons: Sermon[] = [];

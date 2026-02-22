@@ -6,11 +6,10 @@ import { SermonService } from '../../core/services/api/sermon.service';
 import { Sermon } from '../../core/models/sermon.model';
 
 @Component({
-  selector: 'app-admin-sermons',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
-  templateUrl: './admin-sermons.component.html',
-  styleUrls: ['./admin-sermons.component.scss']
+    selector: 'app-admin-sermons',
+    imports: [CommonModule, FormsModule, RouterLink],
+    templateUrl: './admin-sermons.component.html',
+    styleUrls: ['./admin-sermons.component.scss']
 })
 export class AdminSermonsComponent implements OnInit {
   sermons: Sermon[] = [];
