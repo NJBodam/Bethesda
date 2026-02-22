@@ -1,0 +1,55 @@
+<div class="page-hero">
+  <h1>About Us</h1>
+  <p>Get to know Bethesda House of Grace</p>
+</div>
+
+<section class="about-section container">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>Bethesda House of Grace was founded in 1990 with a vision to create a community where people from all walks of life could encounter the love and healing of Jesus Christ. Named after the pool of Bethesda where Jesus performed miracles, our church stands as a symbol of healing, hope, and grace.</p>
+      <p>Over the decades, we have grown from a small group of 20 families to a vibrant congregation of over 1,000 members. We are committed to preaching the Gospel, making disciples, and serving our community.</p>
+    </div>
+    <div class="vision-mission">
+      <div class="vm-card">
+        <h3>🎯 Our Vision</h3>
+        <p>To be a house of healing, hope, and transformation where lives are changed by the power of the Gospel.</p>
+      </div>
+      <div class="vm-card">
+        <h3>🌟 Our Mission</h3>
+        <p>To love God, love people, and make disciples of all nations through worship, fellowship, and service.</p>
+      </div>
+      <div class="vm-card">
+        <h3>💎 Our Values</h3>
+        <ul>
+          <li>Faith in Jesus Christ</li>
+          <li>Love for One Another</li>
+          <li>Service to the Community</li>
+          <li>Excellence in Worship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leadership-section">
+  <div class="container">
+    <h2>Our Leadership</h2>
+    <div class="leadership-grid">
+      <div class="leader-card" *ngFor="let leader of leadership">
+        <div class="leader-avatar">{{ leader.name.charAt(0) }}</div>
+        <h3>{{ leader.name }}</h3>
+        <p class="role">{{ leader.role }}</p>
+        <p class="bio">{{ leader.bio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Come Visit Us</h2>
+    <p>We would love to welcome you to our church family.</p>
+    <a routerLink="/contact" class="btn-link">Contact Us →</a>
+  </div>
+</section>

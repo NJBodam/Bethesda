@@ -1,0 +1,60 @@
+<div class="event-detail-page">
+  <div *ngIf="loading" class="loading">
+    <p>Loading event...</p>
+  </div>
+
+  <div *ngIf="!loading && notFound" class="not-found">
+    <h2>Event Not Found</h2>
+    <p>The event you are looking for does not exist.</p>
+    <a routerLink="/events" class="btn-back">← Back to Events</a>
+  </div>
+
+  <ng-container *ngIf="!loading && event">
+    <div class="event-hero" [style.background-image]="event.imageUrl ? 'url(' + event.imageUrl + ')' : 'none'">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="event-category">{{ event.category }}</span>
+          <h1>{{ event.title }}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <a routerLink="/events" class="btn-back">← Back to Events</a>
+
+      <div class="event-layout">
+        <div class="event-body">
+          <h2>About This Event</h2>
+          <p>{{ event.description }}</p>
+        </div>
+
+        <aside class="event-sidebar">
+          <div class="sidebar-card">
+            <h3>Event Details</h3>
+            <div class="detail-item">
+              <span class="detail-icon">📅</span>
+              <div>
+                <strong>Date</strong>
+                <p>{{ event.date | eventDate }}</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🕐</span>
+              <div>
+                <strong>Time</strong>
+                <p>{{ event.time }}</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>{{ event.location }}</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </ng-container>
+</div>

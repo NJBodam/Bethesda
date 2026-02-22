@@ -1,0 +1,28 @@
+<div class="page-hero">
+  <h1>Sermons</h1>
+  <p>Be nourished by the Word of God</p>
+</div>
+
+<div class="container">
+  <div class="search-bar">
+    <input type="text" placeholder="Search sermons..." (input)="onSearch($event)" class="search-input" />
+  </div>
+
+  <div class="sermons-grid" *ngIf="filteredSermons.length; else noSermons">
+    <app-card *ngFor="let sermon of filteredSermons"
+      [title]="sermon.title"
+      [subtitle]="sermon.speaker + ' · ' + (sermon.date | date:'mediumDate')">
+      <p>{{ sermon.description }}</p>
+      <div class="sermon-meta">
+        <span *ngIf="sermon.scripture" class="meta-tag">📖 {{ sermon.scripture }}</span>
+        <span *ngIf="sermon.series" class="meta-tag series">{{ sermon.series }}</span>
+      </div>
+    </app-card>
+  </div>
+
+  <ng-template #noSermons>
+    <div class="no-results">
+      <p>No sermons found matching "{{ searchTerm }}"</p>
+    </div>
+  </ng-template>
+</div>
