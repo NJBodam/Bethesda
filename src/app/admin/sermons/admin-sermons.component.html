@@ -1,0 +1,75 @@
+<div class="admin-page">
+  <div class="page-header">
+    <div>
+      <a routerLink="/admin/dashboard" class="back-link">← Dashboard</a>
+      <h1>Manage Sermons</h1>
+    </div>
+    <button (click)="openAddForm()" class="btn-primary">+ Add Sermon</button>
+  </div>
+
+  <div class="form-overlay" *ngIf="showForm()">
+    <div class="form-card">
+      <h2>{{ editingSermon ? 'Edit' : 'Add' }} Sermon</h2>
+      <form (ngSubmit)="onSubmit()" #sermonForm="ngForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Title *</label>
+            <input type="text" [(ngModel)]="form.title" name="title" required />
+          </div>
+          <div class="form-group">
+            <label>Speaker *</label>
+            <input type="text" [(ngModel)]="form.speaker" name="speaker" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date *</label>
+            <input type="date" [(ngModel)]="form.date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label>Scripture</label>
+            <input type="text" [(ngModel)]="form.scripture" name="scripture" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Series</label>
+          <input type="text" [(ngModel)]="form.series" name="series" />
+        </div>
+        <div class="form-group">
+          <label>Description *</label>
+          <textarea [(ngModel)]="form.description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="button" (click)="onCancel()" class="btn-cancel">Cancel</button>
+          <button type="submit" [disabled]="sermonForm.invalid" class="btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="data-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Speaker</th>
+          <th>Date</th>
+          <th>Series</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sermon of sermons">
+          <td>{{ sermon.title }}</td>
+          <td>{{ sermon.speaker }}</td>
+          <td>{{ sermon.date | date:'mediumDate' }}</td>
+          <td>{{ sermon.series || '—' }}</td>
+          <td>
+            <button (click)="openEditForm(sermon)" class="btn-edit">Edit</button>
+            <button (click)="onDelete(sermon.id)" class="btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="page-hero">
+  <h1>Events</h1>
+  <p>Stay connected with what's happening at Bethesda</p>
+</div>
+
+<div class="container">
+  <div class="category-filter">
+    <button
+      *ngFor="let cat of categories"
+      [class.active]="selectedCategory === cat"
+      (click)="filterByCategory(cat)"
+      class="filter-btn"
+    >{{ cat }}</button>
+  </div>
+
+  <div class="events-grid">
+    <app-card *ngFor="let event of filteredEvents"
+      [title]="event.title"
+      [subtitle]="(event.date | date:'mediumDate') + ' · ' + event.time">
+      <p>{{ event.description }}</p>
+      <div class="event-details">
+        <span>📍 {{ event.location }}</span>
+        <span class="badge">{{ event.category }}</span>
+      </div>
+    </app-card>
+  </div>
+
+  <div *ngIf="!filteredEvents.length" class="no-results">
+    <p>No events in this category.</p>
+  </div>
+</div>
