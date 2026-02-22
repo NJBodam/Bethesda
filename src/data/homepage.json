@@ -1,0 +1,16 @@
+{
+  "heroTitle": "Welcome to Bethesda House of Grace",
+  "heroSubtitle": "A place to belong, grow, and serve",
+  "aboutTitle": "About Our Church",
+  "aboutText": "Bethesda House of Grace is a community of believers committed to loving God and loving people. We welcome everyone to join us on this journey of faith.",
+  "serviceTimesTitle": "Service Times",
+  "serviceTimes": [
+    { "day": "Sunday", "time": "10:00 AM", "name": "Morning Worship" },
+    { "day": "Wednesday", "time": "7:00 PM", "name": "Bible Study" }
+  ],
+  "welcomeMessage": "We are glad you found us! Come as you are and experience the love of God.",
+  "contactEmail": "info@bethesdahog.org",
+  "contactPhone": "(555) 123-4567",
+  "address": "123 Grace Street, City, State 12345",
+  "updatedAt": "2024-01-07T10:00:00.000Z"
+}
