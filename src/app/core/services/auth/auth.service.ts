@@ -12,6 +12,8 @@ export class AuthService {
     return !!localStorage.getItem(this.TOKEN_KEY);
   }
 
+  // TODO: Replace with real backend authentication before production deployment.
+  // These are demo-only hardcoded credentials and must not be used in production.
   login(username: string, password: string): boolean {
     if (username === 'admin' && password === 'admin123') {
       localStorage.setItem(this.TOKEN_KEY, 'mock-jwt-token');
