@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 async function getAboutContent(): Promise<AboutContent | null> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/about`,
+    "/api/about",
     { cache: "no-store" }
   );
   if (!res.ok) return null;

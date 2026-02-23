@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 async function getUpcomingEvents(): Promise<Event[]> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/events`,
+    "/api/events",
     { cache: "no-store" }
   );
   if (!res.ok) return [];
@@ -18,7 +18,7 @@ async function getUpcomingEvents(): Promise<Event[]> {
 
 async function getLatestSermon(): Promise<Sermon | null> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/sermons`,
+    "/api/sermons",
     { cache: "no-store" }
   );
   if (!res.ok) return null;
