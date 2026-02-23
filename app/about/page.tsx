@@ -10,7 +10,19 @@ async function getAboutContent(): Promise<AboutContent | null> {
     subtitle: "A community of faith, hope, and love",
     history: "Founded in 1995, Bethesda House of Grace has been a beacon of spiritual guidance in our community.",
     mission: "To spread the Gospel of Jesus Christ and build a community of believers committed to spiritual growth, love, and service.",
-    values: ["Faith", "Love", "Community", "Service", "Growth"],
+    vision: "To be a beacon of hope and light in our community, where every believer is transformed by God's Word.",
+    values: [
+      { title: "Faith", description: "Trust in God's promises" },
+      { title: "Love", description: "Compassion and kindness to all" },
+      { title: "Community", description: "United in fellowship and purpose" },
+      { title: "Service", description: "Dedicated to helping others" },
+      { title: "Growth", description: "Continuous spiritual development" },
+    ],
+    pastor: {
+      name: "Pastor John Smith",
+      title: "Senior Pastor",
+      bio: "Devoted shepherd with over 20 years of ministry experience",
+    },
   };
 }
 

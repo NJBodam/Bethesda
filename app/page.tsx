@@ -28,9 +28,10 @@ async function getLatestSermon(): Promise<Sermon | null> {
     title: "Faith in Action",
     speaker: "Pastor John",
     date: new Date().toISOString().split('T')[0],
-    scripture: "James 2:26",
+    series: "Living the Gospel",
     description: "Discover how faith is demonstrated through action",
-    duration: "45 minutes",
+    videoUrl: null,
+    audioUrl: null,
   };
 }
 
