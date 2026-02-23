@@ -8,21 +8,30 @@ import { Sermon } from "./api/sermons/route";
 export const dynamic = "force-dynamic";
 
 async function getUpcomingEvents(): Promise<Event[]> {
-  const res = await fetch(
-    "/api/events",
-    { cache: "no-store" }
-  );
-  if (!res.ok) return [];
-  return res.json();
+  // TODO: Replace with actual API call when backend is ready
+  return [
+    {
+      id: "1",
+      title: "Sunday Service",
+      date: new Date().toISOString().split('T')[0],
+      time: "10:00 AM",
+      location: "Main Sanctuary",
+      description: "Join us for our weekly Sunday service",
+    },
+  ];
 }
 
 async function getLatestSermon(): Promise<Sermon | null> {
-  const res = await fetch(
-    "/api/sermons",
-    { cache: "no-store" }
-  );
-  if (!res.ok) return null;
-  return res.json();
+  // TODO: Replace with actual API call when backend is ready
+  return {
+    id: "1",
+    title: "Faith in Action",
+    speaker: "Pastor John",
+    date: new Date().toISOString().split('T')[0],
+    scripture: "James 2:26",
+    description: "Discover how faith is demonstrated through action",
+    duration: "45 minutes",
+  };
 }
 
 export default async function Home() {

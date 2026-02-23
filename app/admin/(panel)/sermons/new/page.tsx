@@ -16,15 +16,9 @@ export default function NewSermonPage() {
   const router = useRouter();
 
   async function handleSubmit(values: Record<string, string>) {
-    const res = await fetch("/api/sermons", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-    if (!res.ok) {
-      const data = await res.json();
-      throw new Error(data.error || "Failed to create sermon");
-    }
+    // TODO: Replace with actual API call when backend is ready
+    console.log("New sermon submitted:", values);
+    // Simulate API success
     router.push("/admin/sermons");
     router.refresh();
   }

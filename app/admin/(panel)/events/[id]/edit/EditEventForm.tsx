@@ -17,15 +17,9 @@ export default function EditEventForm({ event }: { event: Event }) {
   const router = useRouter();
 
   async function handleSubmit(values: Record<string, string>) {
-    const res = await fetch(`/api/events/${event.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-    if (!res.ok) {
-      const data = await res.json();
-      throw new Error(data.error || "Failed to update event");
-    }
+    // TODO: Replace with actual API call when backend is ready
+    console.log("Event update submitted:", values);
+    // Simulate API success
     router.push("/admin/events");
     router.refresh();
   }

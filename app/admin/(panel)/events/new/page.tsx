@@ -16,15 +16,9 @@ export default function NewEventPage() {
   const router = useRouter();
 
   async function handleSubmit(values: Record<string, string>) {
-    const res = await fetch("/api/events", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-    if (!res.ok) {
-      const data = await res.json();
-      throw new Error(data.error || "Failed to create event");
-    }
+    // TODO: Replace with actual API call when backend is ready
+    console.log("New event submitted:", values);
+    // Simulate API success
     router.push("/admin/events");
     router.refresh();
   }

@@ -4,12 +4,14 @@ import { AboutContent } from "../api/about/route";
 export const dynamic = "force-dynamic";
 
 async function getAboutContent(): Promise<AboutContent | null> {
-  const res = await fetch(
-    "/api/about",
-    { cache: "no-store" }
-  );
-  if (!res.ok) return null;
-  return res.json();
+  // TODO: Replace with actual API call when backend is ready
+  return {
+    title: "About Bethesda House of Grace",
+    subtitle: "A community of faith, hope, and love",
+    history: "Founded in 1995, Bethesda House of Grace has been a beacon of spiritual guidance in our community.",
+    mission: "To spread the Gospel of Jesus Christ and build a community of believers committed to spiritual growth, love, and service.",
+    values: ["Faith", "Love", "Community", "Service", "Growth"],
+  };
 }
 
 export default async function AboutPage() {

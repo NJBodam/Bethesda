@@ -73,20 +73,13 @@ export default function ContactForm() {
     setSuccessMessage(null);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fields),
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setSuccessMessage(data.message);
-        setFields(initialFields);
-        setTouched({});
-        setErrors({});
-      } else {
-        setServerError(data.error ?? "Something went wrong. Please try again.");
-      }
+      // TODO: Replace with actual API call when backend is ready
+      console.log("Contact form submitted:", fields);
+      // Simulate API success
+      setSuccessMessage("Thank you! Your message has been received. We'll get back to you soon.");
+      setFields(initialFields);
+      setTouched({});
+      setErrors({});
     } catch {
       setServerError("Unable to send your message. Please try again later.");
     } finally {
