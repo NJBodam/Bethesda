@@ -105,6 +105,70 @@ export default async function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Leadership */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
+            Our Leadership Team
+          </h2>
+          <p className="text-center text-gray-500 mb-10">
+            Dedicated servants leading our congregation with faith and purpose.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "John Doe",
+                role: "Assistant Pastor & Head of Administration",
+              },
+              {
+                name: "John Doe",
+                role: "Assistant Pastor & Head of Finance",
+              },
+              {
+                name: "John Doe",
+                role: "Assistant Pastor & Choir Master",
+              },
+              {
+                name: "John Doe",
+                role: "Assistant Pastor",
+              },
+              {
+                name: "John Doe",
+                role: "Branch Pastor",
+              },
+            ].map((leader, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 flex flex-col items-center text-center"
+              >
+                {/* Portrait placeholder */}
+                <div className="w-24 h-24 rounded-full bg-amber-100 border-4 border-amber-300 flex items-center justify-center mb-4 overflow-hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-16 h-16 text-amber-400"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 mb-1">
+                  {leader.name}
+                </h3>
+                <p className="text-blue-600 text-sm font-medium leading-snug">
+                  {leader.role}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
