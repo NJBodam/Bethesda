@@ -13,6 +13,9 @@ export function Header() {
           <Link href="/about" className="hover:text-yellow-400 transition-colors">
             About
           </Link>
+          <Link href="/ministries" className="hover:text-yellow-400 transition-colors">
+            Ministries
+          </Link>
           <a href="/#sermons" className="hover:text-yellow-400 transition-colors">
             Sermons
           </a>
