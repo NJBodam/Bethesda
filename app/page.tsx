@@ -1,4 +1,4 @@
-import HeroBanner from "./components/HeroBanner";
+import HeroSlider from "./components/HeroSlider";
 import UpcomingEvents from "./components/UpcomingEvents";
 import LatestSermon from "./components/LatestSermon";
 import ServiceTimes from "./components/ServiceTimes";
@@ -43,11 +43,7 @@ export default async function Home() {
 
   return (
     <main>
-      <HeroBanner
-        title="Welcome to Bethesda House of Grace"
-        subtitle="A place of worship, community, and spiritual growth for all people."
-        backgroundImage="/hero-bg.jpg"
-      />
+      <HeroSlider />
       <UpcomingEvents events={events} />
       {sermon && <LatestSermon sermon={sermon} />}
       <ServiceTimes />
