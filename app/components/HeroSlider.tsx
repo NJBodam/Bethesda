@@ -1,4 +1,7 @@
 "use client";
+import photo1 from '@/assets/bethesda_main_sevice.jpg';
+import photo2 from '@/assets/bethesda_service_2.jpg';
+import photo3 from '@/assets/service_3.jpg';
 
 import { useState, useEffect, useCallback } from "react";
 
@@ -11,6 +14,7 @@ interface Slide {
   ctaLabel?: string;
   ctaHref?: string;
   gradient: string;
+  backgroundImage: string;
 }
 
 const slides: Slide[] = [
@@ -23,6 +27,7 @@ const slides: Slide[] = [
     ctaLabel: "Plan Your Visit",
     ctaHref: "/contact",
     gradient: "from-amber-900/80 via-orange-800/70 to-yellow-900/60",
+    backgroundImage: photo1.src,
   },
   {
     id: 2,
@@ -33,6 +38,7 @@ const slides: Slide[] = [
     ctaLabel: "Register Now",
     ctaHref: "/contact",
     gradient: "from-rose-900/80 via-red-800/70 to-orange-900/60",
+    backgroundImage: photo2.src,
   },
   {
     id: 3,
@@ -43,6 +49,7 @@ const slides: Slide[] = [
     ctaLabel: "Learn More",
     ctaHref: "/contact",
     gradient: "from-stone-900/80 via-amber-800/70 to-yellow-800/60",
+    backgroundImage: photo3.src,
   },
 ];
 
@@ -89,8 +96,7 @@ export default function HeroSlider() {
           <div
             className={`absolute inset-0 bg-gradient-to-br ${slide.gradient}`}
             style={{
-              backgroundImage:
-                "url('/hero-bg.jpg'), linear-gradient(to bottom right, #78350f, #92400e)",
+              backgroundImage: `url('${slide.backgroundImage}'), linear-gradient(to bottom right, #78350f, #92400e)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundBlendMode: "multiply",
