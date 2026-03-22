@@ -1,13 +1,16 @@
-import { ministriesData } from "../api/ministries/route";
+import { ministriesData, ministriesHero } from "../api/ministries/route";
+import HeroBanner from "../components/HeroBanner";
 import MinistryCard from "../components/MinistryCard";
 
 export default async function MinistriesPage() {
   const ministries = ministriesData;
+  const hero = ministriesHero;
+
 
   return (
     <main>
       {/* Hero Banner */}
-      <section className="relative flex items-center justify-center min-h-[400px] text-white bg-gradient-to-br from-blue-900 to-blue-700">
+      {/* <section className="relative flex items-center justify-center min-h-[400px] text-white bg-gradient-to-br from-blue-900 to-blue-700">
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
           <h1 className="text-5xl font-bold mb-4 leading-tight">Ministries</h1>
@@ -16,7 +19,12 @@ export default async function MinistriesPage() {
             House of Grace.
           </p>
         </div>
-      </section>
+      </section> */}
+      <HeroBanner
+        title={hero.title}
+        subtitle={hero.subtitle}
+        backgroundImage="/hero-bg.jpg"
+      />
 
       {/* Ministries Grid */}
       <section className="py-16 bg-gray-50">

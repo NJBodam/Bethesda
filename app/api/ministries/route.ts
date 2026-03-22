@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 import { Ministry } from "@/types/ministry";
 
-export const ministriesData: Ministry[] = [
+export const ministriesContent = {
+  hero: {
+    title: "Our Ministries",
+    subtitle:
+      "Discover the various ways we serve God and build community together",
+  },
+  data: [
   {
     id: "1",
     title: "Main Church",
@@ -196,8 +202,10 @@ export const ministriesData: Ministry[] = [
       },
     ],
   },
-];
+  ]};
 
+export const ministriesData = ministriesContent.data;
+export const ministriesHero = ministriesContent.hero;
 export async function GET() {
   return NextResponse.json(ministriesData);
 }
