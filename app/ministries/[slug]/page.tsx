@@ -26,7 +26,7 @@ export default async function MinistryDetailPage({ params }: Props) {
         style={{
           backgroundImage: `url(${ministry.heroImage}), linear-gradient(to bottom right, #1e3a8a, #1d4ed8)`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center bottom",
           backgroundBlendMode: "multiply",
         }}
       >

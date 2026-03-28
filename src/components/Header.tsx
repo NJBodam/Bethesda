@@ -16,7 +16,8 @@ export function Header() {
             height={50}
             className="h-15 w-15"
           />
-          <span className="font-bold text-black-400 text-xl hover:text-yellow-300 transition-colors">
+          <span className="font-bold text-black-400 text-xl hover:text-yellow-300 transition-colors italic"
+          style={{ fontFamily: 'Lobster Two' }}>
             Bethesda House of Grace
           </span>
         </Link>

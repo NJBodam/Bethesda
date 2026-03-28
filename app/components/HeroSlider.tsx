@@ -1,5 +1,5 @@
 "use client";
-import photo1 from '@/assets/bethesda_main_sevice.jpg';
+import photo1 from '@/assets/main_church2.png';
 import photo2 from '@/assets/bethesda_service_2.jpg';
 import photo3 from '@/assets/service_3.jpg';
 
