@@ -15,7 +15,7 @@ export default function HeroBanner({
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
       }}
     >
       <div className="absolute inset-0 bg-black/50" />

@@ -19,7 +19,7 @@ const aboutContent: AboutContent = {
   subtitle:
     "A vibrant Christian community rooted in faith, love, and service since 1995.",
   history:
-    "Bethesda House of Grace was founded in 1995 by a small group of believers with a shared vision: to create a welcoming, Spirit-filled community where all people could encounter the living God. Over the years, our congregation has grown into a thriving family of worshippers committed to prayer, biblical teaching, and serving our neighbours.",
+    "We are a loving and welcoming Church. Our community is passionate about God and people. No matter where you come from or what your past looks like, you are welcome here.",
   mission:
     "Our mission is to make disciples of Jesus Christ who love God, love people, and make a difference in the world.",
   vision:
@@ -47,9 +47,9 @@ const aboutContent: AboutContent = {
     },
   ],
   pastor: {
-    name: "Pastor John Bodam",
-    title: "Senior Pastor",
-    bio: "Pastor John Bodam has been leading Bethesda House of Grace since its founding in 1995. With a heart for people and a passion for the Word, he is dedicated to helping every member discover their purpose in Christ.",
+    name: "Pastor Stephen Essah",
+    title: "Resident Pastor",
+    bio: "Pastor Stephen Essah has been leading Bethesda House of Grace since its founding in 1995. With a heart for people and a passion for the Word, he is dedicated to helping every member discover their purpose in Christ.",
   },
 };
 

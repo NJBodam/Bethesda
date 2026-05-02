@@ -112,15 +112,23 @@ export default async function Home() {
   return (
     <main>
       <HeroSlider />
-      <section className="py-16 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
+      <section className="py-16 pb-4 bg-white">
+      <div className="max-w-5xl mx-auto px-6 ">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
           Our Confession
         </h2>
         <p className="text-lg text-gray-800 mb-8 max-w-xl mx-auto leading-relaxed text-center">
           For all have sinned and fallen short of the glory of God. <br /><span className="text-gray-500 italic"> - Romans 3:23</span>
         </p>
-    
+        <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Salvation</h3>
+        <p className="text-lg text-gray-800 mb-8 max-w-xl mx-auto leading-relaxed text-center">
+          Salvation is God's gift of new life through Jesus Christ. We have all sinned but God loves us and sent His Son to die for us so we can be forgiven and restored to Him.
+          
+          <br /><br />You cannot earn salvation it comes by grace through faith. All you need to do is believe in Jesus, turn away from sin, and accept Him as your Lord and Savior.
+          When you receive salvation, you are forgiven, made new and given eternal life.
+
+          <br /><br />"For God so loved the world that He gave His only Son, that whoever believes in Him shall not perish but have eternal life." <br /><span className="text-gray-500 italic"> - John 3:16</span>
+        </p>
       </div>
     </section>
       <UpcomingEvents events={events} />

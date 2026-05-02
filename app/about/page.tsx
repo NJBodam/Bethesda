@@ -1,5 +1,6 @@
 import HeroBanner from "../components/HeroBanner";
 import { AboutContent } from "../api/about/route";
+import basptism2 from "../../src/assets/baptism2.jpg";
 
 export const dynamic = "force-dynamic";
 
@@ -8,7 +9,9 @@ async function getAboutContent(): Promise<AboutContent | null> {
   return {
     title: "About Bethesda House of Grace",
     subtitle: "A community of faith, hope, and love",
-    history: "Founded in 1995, Bethesda House of Grace has been a beacon of spiritual guidance in our community.",
+    history: "We are a loving and welcoming Church. Our community is passionate about God and people."+ 
+    " No matter where you come from or what your past looks like, you are welcome here." +
+     " \n\nWe believe in: \n God's love for everyone, the power of prayer, and a life transformed through Jesus Christ.",
     mission: "To spread the Gospel of Jesus Christ and build a community of believers committed to spiritual growth, love, and service.",
     vision: "To be a beacon of hope and light in our community, where every believer is transformed by God's Word.",
     values: [
@@ -19,9 +22,9 @@ async function getAboutContent(): Promise<AboutContent | null> {
       { title: "Growth", description: "Continuous spiritual development" },
     ],
     pastor: {
-      name: "Pastor John Smith",
-      title: "Senior Pastor",
-      bio: "Devoted shepherd with over 20 years of ministry experience",
+      name: "Pastor Stephen Essah",
+      title: "Resident Pastor",
+      bio: "Pastor Stephen Essah has been leading Bethesda House of Grace since its founding in 1995. With a heart for people and a passion for the Word, he is dedicated to helping every member discover their purpose in Christ.",
     },
   };
 }
@@ -44,16 +47,16 @@ export default async function AboutPage() {
       <HeroBanner
         title={about.title}
         subtitle={about.subtitle}
-        backgroundImage="/hero-bg.jpg"
+        backgroundImage={basptism2.src}
       />
 
       {/* History */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-            Our Story
+            Our Church
           </h2>
-          <p className="text-gray-600 leading-relaxed text-lg">{about.history}</p>
+          <p className="text-gray-600 leading-relaxed text-xl whitespace-pre-line mt-2 text-center">{about.history}</p>
         </div>
       </section>
 
@@ -62,11 +65,11 @@ export default async function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 grid gap-8 sm:grid-cols-2">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
             <h3 className="text-xl font-bold text-blue-700 mb-3">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed">{about.mission}</p>
+            <p className="text-gray-600 text-x leading-relaxed">{about.mission}</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
             <h3 className="text-xl font-bold text-blue-700 mb-3">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed">{about.vision}</p>
+            <p className="text-gray-600 text-x leading-relaxed">{about.vision}</p>
           </div>
         </div>
       </section>
