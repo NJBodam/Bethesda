@@ -1,7 +1,8 @@
 "use client";
 import photo1 from '@/assets/main_church2.png';
 import photo2 from '@/assets/bethesda_service_2.jpg';
-import photo3 from '@/assets/service_3.jpg';
+import photo4 from '@/assets/easter_conv.jpg';
+import photo3 from '@/assets/lechturm.png';
 
 import { useState, useEffect, useCallback } from "react";
 
@@ -22,8 +23,8 @@ const slides: Slide[] = [
     id: 1,
     title: "Sunday Morning Worship",
     subtitle: "Come and experience the presence of God in our weekly worship gathering.",
-    date: "Every Sunday · 9:00 AM & 11:00 AM",
-    location: "Main Sanctuary",
+    date: "Every Sunday · 1:30 PM",
+    location: "Lange Str. 19A, 49080 Osnabrück",
     ctaLabel: "Plan Your Visit",
     ctaHref: "/contact",
     gradient: "from-amber-900/80 via-orange-800/70 to-yellow-900/60",
@@ -31,21 +32,21 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    title: "Easter Celebration 2026",
-    subtitle: "Celebrate the resurrection of our Lord Jesus Christ with the Bethesda family.",
-    date: "April 5, 2026 · 8:00 AM",
-    location: "Main Sanctuary",
+    title: "Easter Camp Meeting 2026",
+    subtitle: "Greater love hath no man than this, that a man lay down his life for his friends - John 15:13",
+    date: "April 3rd - 5th, 2026",
+    location: "International Believers Convent, Berlin",
     ctaLabel: "Register Now",
     ctaHref: "/contact",
     gradient: "from-rose-900/80 via-red-800/70 to-orange-900/60",
-    backgroundImage: photo2.src,
+    backgroundImage: photo4.src,
   },
   {
     id: 3,
-    title: "Annual Prayer Conference",
-    subtitle: "Three days of prayer, worship, and powerful teaching from the Word of God.",
-    date: "March 25–27, 2026 · 6:00 PM",
-    location: "Conference Hall",
+    title: "Jugendgottesdienst",
+    subtitle: "Join us for an inspiring youth service with a focus on teaching the word, prayer, community and discipleship.",
+    date: "Every other Sunday · 11:00 AM",
+    location: "Lange Str. 19A, 49080 Osnabrück",
     ctaLabel: "Learn More",
     ctaHref: "/contact",
     gradient: "from-stone-900/80 via-amber-800/70 to-yellow-800/60",
