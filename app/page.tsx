@@ -48,14 +48,22 @@ async function getUpcomingEvents(): Promise<Event[]> {
     },
     {
       id: "2",
-      title: "Youth Fellowship",
-      date: getNextOccurrenceOfDay('Monday'),
-      time: "6:00 PM",
-      location: "Online (Zoom)",
-      description: "Join us for our weekly Monday Youth Fellowship",
+      title: "Youth Fellowship (Leuchtturm)",
+      date: getNextOccurrenceOfDay('Sunday'),
+      time: "11:00 AM (Every other Sunday)",
+      location: "Main Church",
+      description: "Join us for our bi-weekly Sunday Youth Fellowship",
     },
     {
       id: "3",
+      title: "Youth Prayers (Leuchtturm)",
+      date: getNextOccurrenceOfDay('Monday'),
+      time: "8:30 PM",
+      location: "Online (Zoom)",
+      description: "Join us for our weekly Youth Prayers",
+    },
+    {
+      id: "4",
       title: "Bible Study",
       date: getNextOccurrenceOfDay('Tuesday'),
       time: "6:00 PM",
@@ -63,12 +71,20 @@ async function getUpcomingEvents(): Promise<Event[]> {
       description: "Join us for our weekly Tuesday Bible study",
     },
     {
-      id: "4",
+      id: "5",
+      title: "Prayer Meeting",
+      date: getNextOccurrenceOfDay('Wednesday'),
+      time: "6:00 PM",
+      location: "Main Church",
+      description: "Join us for our physical intercessory Prayer Meetings on Wednesdays",
+    },
+    {
+      id: "6",
       title: "Prayer Towers",
       date: getNextOccurrenceOfDay('Friday'),
       time: "6:00 PM",
       location: "Online (Zoom)",
-      description: "Join us for our weekly Prayer meetings",
+      description: "Join us for our online intercessory Prayer meetings",
     },
   ];
 }
@@ -107,10 +123,10 @@ export default async function Home() {
     
       </div>
     </section>
-          <UpcomingEvents events={events} />
+      <UpcomingEvents events={events} />
 
-      {sermon && <LatestSermon sermon={sermon} />}
-      <ServiceTimes />
+{/*       {sermon && <LatestSermon sermon={sermon} />}
+ */}   <ServiceTimes />
     </main>
   );
 }

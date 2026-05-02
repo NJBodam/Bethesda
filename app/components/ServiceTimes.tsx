@@ -8,34 +8,28 @@ interface ServiceTime {
 const serviceTimes: ServiceTime[] = [
   {
     day: "Sunday",
-    name: "Morning Worship",
-    time: "8:00 AM",
-    location: "Main Sanctuary",
+    name: "Youth Fellowship",
+    time: "11:00 AM (Every other Sunday)",
+    location: "Main Church",
   },
   {
     day: "Sunday",
-    name: "Sunday School",
-    time: "9:30 AM",
-    location: "Fellowship Hall",
-  },
-  {
-    day: "Sunday",
-    name: "Main Service",
-    time: "11:00 AM",
-    location: "Main Sanctuary",
+    name: "Main Church Service",
+    time: "1:30 PM",
+    location: "Main Church",
   },
   {
     day: "Wednesday",
     name: "Mid-Week Prayer",
-    time: "7:00 PM",
-    location: "Chapel",
+    time: "6:00 PM",
+    location: "Main Church",
   },
   {
     day: "Friday",
-    name: "Youth Service",
-    time: "6:30 PM",
-    location: "Youth Center",
-  },
+    name: "Online Prayer",
+    time: "6:00 PM",
+    location: "Online (Zoom)",
+  }
 ];
 
 const dayOrder = ["Sunday", "Wednesday", "Friday"];

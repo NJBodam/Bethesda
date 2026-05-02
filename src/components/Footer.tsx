@@ -45,13 +45,13 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li className="text-gray-400">
-                <span className="text-gray-500">Email:</span> contact@bethesda.com
+                <span className="text-gray-500">Email:</span> besthesdahouseofgrace1010@gmail.com
               </li>
               <li className="text-gray-400">
-                <span className="text-gray-500">Phone:</span> (555) 123-4567
+                {/* <span className="text-gray-500">Phone:</span> (555) 123-4567 */}
               </li>
               <li className="text-gray-400">
-                <span className="text-gray-500">Address:</span> 123 Grace Street, Faith City, ST 12345
+                <span className="text-gray-500">Address:</span> Lange Str. 19A, 49080 Osnabrück, Germany
               </li>
             </ul>
           </div>
